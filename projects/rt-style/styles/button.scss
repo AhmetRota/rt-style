@@ -1,0 +1,92 @@
+@import './styles.scss';
+
+.rt-btn {
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+
+  mat-icon {
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 5px;
+  }
+}
+
+.rt-btn-xs {
+  width: 80px;
+}
+
+.rt-btn-sm {
+  width: 115px;
+}
+
+.rt-btn-lg {
+  width: 150px;
+}
+
+.rt-btn-xlg {
+  width: 215px;
+}
+
+.rt-btn-primary {
+  @extend .rt-btn;
+  background-color: var(--primary);
+  color: #FFF;
+  height: 40px;
+  @include rt-font(14px, 500, 16px);
+  text-align: center;
+
+  &:hover {
+    background-color: var(--color-primary-40);
+  }
+
+  &:active {
+    background-color: var(--color-primary-06);
+  }
+}
+
+.rt-btn-secondary {
+  @extend .rt-btn;
+  background-color: var(--color-primary-06);
+  color: var(--primary);
+  height: 40px;
+  @include rt-font(14px, bold, 16px);
+  text-align: center;
+
+  &:hover {
+    background-color: var(--color-primary-15);
+  }
+
+  &:active {
+    background-color: var(--color-primary-40);
+  }
+}
+
+.rt-btn-tertiary {
+  @extend .rt-btn;
+  border: 1px solid $_01_B_Sky_Light !important;
+  box-sizing: border-box;
+  background-color: #FFF;
+  color: var(--primary);
+  height: 40px;
+  @include rt-font(14px, bold, 16px);
+  text-align: center;
+
+  &:hover {
+    background-color: var(--primary_06);
+  }
+
+  &:active {
+    background-color: var(--color-primary-15);
+  }
+}
+
+.rt-btn-disable {
+  @extend .rt-btn;
+  background-color: var(--color-disable-button-bg);
+  color: var(--color-disable-button);
+  height: 40px;
+  @include rt-font(14px, bold, 16px);
+  text-align: center;
+}

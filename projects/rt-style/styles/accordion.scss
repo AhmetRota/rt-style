@@ -1,0 +1,48 @@
+@import './styles.scss';
+.rt-mat-accordion {
+    padding: 8px 1px 8px 1px !important;
+    box-sizing: border-box !important;
+    border: 1px solid !important;
+    border-color: var(--color-01-sky) !important;
+    border-radius: 8px !important;
+    background-color: var(--color-page-background) !important;
+  
+    mat-expansion-panel {
+      box-shadow: none !important;
+      background-color: var(--color-page-background) !important;
+    }
+  
+    mat-expansion-panel-header {
+      height: 18px !important;
+      padding: 14px 16px 13px 16px !important;
+      color: var(--color-text) !important;
+      @include rt-font(16px, 500, 19px);
+    }
+  
+    mat-panel-title {
+      color: var(--color-text) !important;
+    }
+  
+    mat-expansion-panel:hover {
+      background-color: var(--color-custom-01-sky) !important;
+    }
+  
+    .mat-expansion-panel-body {
+      background-color: var(--color-custom-02-sky) !important;
+      color: var(--color-text) !important;
+      @include rt-font(14px, normal, 16px);
+      padding: 0px 25px 16px 16px !important;
+    }
+  
+    .mat-expansion-panel-spacing {
+      margin: 0 !important;
+    }
+  
+    .mat-expansion-panel-header.mat-expanded {
+      background-color: var(--color-custom-02-sky) !important;
+    }
+  
+    .mat-expansion-indicator::after {
+      border-color: var(--color-text) !important;
+    }
+}

@@ -1,0 +1,176 @@
+@import './theme.scss';
+
+$font-family: Roboto;
+
+// Start fonts
+@mixin rt-font($fontSize: 14px, $fontWeight: 500, $lineHeight: 16px) {
+  font-family: $font-family;
+  letter-spacing: 0;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+
+:root {
+    --color-page-background: white;
+    --color-text: #{$_02_A_Text_Light};
+    --color-primary: #{$_03_A_Primary_500};
+    --primary: #{$Primary_Light};
+    --primary_06: #{$Primary_06_Light};
+    --color-text-light: #{$_02_B_Text_Light};
+    --color-e-sky-extra: #{$_01_E_Sky_Extra_Light};
+    --color-01-sky: #{$_01_C_Sky_Light};
+    --color-custom-01-sky: #{$_01_B_Sky_Light};
+    --color-custom-02-sky: #{$_01_A_Sky_Light};
+    --color-custom-03-sky: #{$_01_B_Sky_Light};
+    --color-primary-40: #{$Primary_40_Light};
+    --color-primary-06: #{$Primary_06_Light};
+    --color-primary-15: #{$Primary_15_Light};
+    --color-primary-70: #{$Primary_70_Light};
+    --color-disable-button-bg: #{$_01_B_Sky_Light};
+    --color-disable-button: #{$_01_D_Sky_Lighter};
+    --color-label-default: #{$_01_C_Sky_Light};
+    --color-label-primary: #{$Custom_Primary};
+    --color-label-border: #{$_01_C_Sky_Light};
+    --color-scrollbar: #{$_01_C_Sky_Light};
+    --color-dialog-header: #{$_01_G_Dark};
+    --color-dialog-footer-bg: #{$_01_A_Sky_Light};
+    --color-dialog-icon: #{$_01_C_Sky_Dark};
+    --color-icon-hover: #{$_01_C_Sky_Light};
+    --color-stepper-icon: #{$Primary_Light};
+    --color-stepper-bg: #{$_01_E_Sky_Extra_Light};
+    --color-stepper-header: #{$_01_G_Dark};
+    --color-hover: #{$_01_B_Sky_Light};
+    --color-stepper-line: #{$_01_C_Sky_Light};
+    --color-inputs-bg: #{$_01_A_Sky_Light};
+    --color-border: #{$_03_A_Primary_500};
+    --color-inputs: #{$_02_A_Text_Light};
+    --color-dropdown-icon-bg: #{$_02_A_Text_Light};
+    --feedback-shadow: #{$Feedback_Shadow_Light};
+    --feedback-default-background: #{$Feedback_Success_Background_Light};
+    --feedback-embedded-background: #{$Feedback_Embedded_Background_Light};
+    --feedback-embedded-border: none;
+    --form-label: #{$_03_A_Primary_500};
+    --form-error-label: #{$_A_Error_500};
+    --color-loading-indicator-bg: #{$Black_60};
+    --selector-bg: #{$_01_D_Sky_Lighter};
+    --selector-hover-bg: #{$Custom_01_Sky_Light};
+    --selector-disable-border: #{$_01_B_Sky_Light}; 
+    --selector-disable-text: #{$Custom_02_Sky_Light};
+    --multi-select-inactive: #{$_02_C_Text_Ligher};
+    --selector-disable-text: #{$Custom_02_Sky_Light}; 
+    --popover-header: #{$_01_G_Dark};
+    --popover-divider-bg: #{$Custom_Gray};
+    --popover-content: #{$_02_A_Text_Light};
+    --select-menu-selected-item-bg: #{$_01_B_Sky_Light};
+    --select-menu-label: #{$_02_C_Text_Ligher};
+}
+  
+.dark {
+    --color-page-background: #{$_01_G_Dark};
+    --color-text: #{$_02_A_Text_Dark};
+    --color-primary: #{$_03_A_Primary_500};
+    --primary: #{$Primary_Dark};
+    --primary_06: #{$Primary_06_Dark};
+    --color-text-light: #{$_02_B_Text_Dark};
+    --color-e-sky-extra: #{$_01_E_Sky_Extra_Dark};
+    --color-01-sky: #{$_01_B_Sky_Dark};
+    --color-custom-01-sky: #{$_02_E_Text_Extra_Extra_Dark};
+    --color-custom-02-sky: #{$_02_E_Text_Extra_Extra_Dark};
+    --color-custom-03-sky: #{$Custom_01_Sky_Dark};
+    --color-primary-40: #{$Primary_40_Dark};
+    --color-primary-06: #{$Primary_06_Dark};
+    --color-primary-15: #{$Primary_15_Dark};
+    --color-primary-70: #{$Primary_70_Dark};
+    --color-disable-button-bg: #{$_01_D_Sky_Darker};
+    --color-disable-button: #{$_01_C_Sky_Dark};
+    --color-label-default: #{$_01_C_Sky_Dark};
+    --color-label-primary: #{$Primary_Dark};
+    --color-label-border: #{$_02_E_Text_Extra_Extra_Dark};
+    --color-scrollbar: #{$_01_C_Sky_Dark};
+    --color-dialog-header: #{$_01_E_Sky_Extra_Light};
+    --color-dialog-footer-bg: #{$_01_F_Sky_Extra_Dark};
+    --color-dialog-icon: #{$_02_B_Text_Dark};
+    --color-icon-hover: #{$_01_F_Sky_Extra_Dark};
+    --color-stepper-icon: #{$Custom_Primary};
+    --color-stepper-bg: #{$_01_G_Dark};
+    --color-stepper-header: #{$_01_E_Sky_Extra_Light};
+    --color-hover: #{$_01_D_Sky_Darker};
+    --color-stepper-line: #{$_01_C_Sky_Dark};
+    --color-inputs-bg: #{$_01_F_Sky_Extra_Dark};
+    --color-border: #{$Primary_Dark};
+    --color-inputs: #{$_01_E_Sky_Extra_Light};
+    --color-dropdown-icon-bg: #{$_02_B_Text_Dark};
+    --feedback-shadow: #{$Feedback_Shadow_Dark};
+    --feedback-default-background: #{$Feedback_Success_Background_Dark};
+    --feedback-embedded-background: #{$Feedback_Embedded_Background_Dark};
+    --feedback-embedded-border: #{$_01_C_Sky_Dark};
+    --form-label: #{$Primary_Dark};
+    --form-error-label: #{$Error_Dark};
+    --color-loading-indicator-bg: #{$_01_D_Sky_Darker_60};
+    --selector-bg: #{$_01_B_Sky_Dark};
+    --selector-hover-bg: #{$_01_A_Sky_Dark};
+    --selector-disable-border: #{$_02_D_Text_Extra_Dark}; 
+    --selector-disable-text: #{$_02_D_Text_Extra_Dark};
+    --multi-select-inactive: #{$_01_C_Sky_Dark};
+    --popover-header: #{$_01_E_Sky_Extra_Light};
+    --popover-divider-bg: #{$_01_C_Sky_Dark};
+    --popover-content: #{$_02_B_Text_Dark};
+    --selector-disable-text: #{$_02_D_Text_Extra_Dark}; 
+    --select-menu-selected-item-bg: #{$_01_F_Sky_Extra_Dark};
+    --select-menu-label: #{$_02_B_Text_Dark};
+}
+
+
+mat-button-toggle-group {
+    width: 100%;
+}
+
+.task-toggle {
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: var(--color-e-sky-extra);
+    border-radius: 6px;
+    background-color: var(--color-e-sky-extra);
+    padding: 4px;
+
+    .toggle {
+        width: 100px;
+        height: 40px;
+        border-radius: 6px;
+        background-color: var(--color-e-sky-extra);
+        color: var(--color-text-light);
+        @include rt-font;
+        text-align: center;
+        border-left: none !important;
+    }
+
+    ::ng-deep .mat-button-toggle-label-content {
+        height: 40px !important;
+        line-height: 40px !important;
+    }
+
+    .mat-icon {
+        border-left: none !important;
+    }
+
+    .mat-button-toggle-checked {
+        background-color: var(--primary_06);
+        color: var(--primary);
+    }
+
+    .mat-button-toggle-button {
+        height: 40px !important;
+    }
+
+    .mat-button-toggle-appearance-standard {
+        line-height: 40px !important;
+    }
+
+    .icon-toggle {
+        width: 46px;
+    }
+    
+}

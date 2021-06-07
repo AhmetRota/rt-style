@@ -1,0 +1,10 @@
+<mat-button-toggle-group name="viewType" aria-label="View Type" class="task-toggle" [value]="selectedToggle" (change)="changeSelectedToggle($event)" fxLayoutGap="4px">
+    <mat-button-toggle
+        *ngFor="let input of buttonList"
+        [value]="input.id"
+        [ngClass]="input.isViewText ? 'toggle' : 'icon-toggle toggle'"
+    >   
+        <p *ngIf="input.isViewText; else elseBlock">{{input.text}}</p>
+        <ng-template #elseBlock> <mat-icon>{{input.icon}}</mat-icon></ng-template>
+    </mat-button-toggle>
+</mat-button-toggle-group>

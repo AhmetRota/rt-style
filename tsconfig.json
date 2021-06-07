@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -19,7 +18,25 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "rls-button": [
+        "dist/rls-button/rls-button",
+        "dist/rls-button"
+      ],
+      "rls-tabs": [
+        "dist/rls-tabs/rls-tabs",
+        "dist/rls-tabs"
+      ],
+      "rt-style": [
+        "dist/rt-style/rt-style",
+        "dist/rt-style"
+      ],
+      "rt-tabs": [
+        "dist/rt-tabs/rt-tabs",
+        "dist/rt-tabs"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,

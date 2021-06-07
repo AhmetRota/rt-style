@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -94,6 +95,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -125,7 +127,170 @@
           }
         }
       }
+    },
+    "RlsButton": {
+      "projectType": "library",
+      "root": "projects/rls-button",
+      "sourceRoot": "projects/rls-button/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/rls-button/tsconfig.lib.json",
+            "project": "projects/rls-button/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rls-button/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rls-button/src/test.ts",
+            "tsConfig": "projects/rls-button/tsconfig.spec.json",
+            "karmaConfig": "projects/rls-button/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rls-button/tsconfig.lib.json",
+              "projects/rls-button/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "RlsTabs": {
+      "projectType": "library",
+      "root": "projects/rls-tabs",
+      "sourceRoot": "projects/rls-tabs/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/rls-tabs/tsconfig.lib.json",
+            "project": "projects/rls-tabs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rls-tabs/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rls-tabs/src/test.ts",
+            "tsConfig": "projects/rls-tabs/tsconfig.spec.json",
+            "karmaConfig": "projects/rls-tabs/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rls-tabs/tsconfig.lib.json",
+              "projects/rls-tabs/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "RtStyle": {
+      "projectType": "library",
+      "root": "projects/rt-style",
+      "sourceRoot": "projects/rt-style/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/rt-style/tsconfig.lib.json",
+            "project": "projects/rt-style/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rt-style/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rt-style/src/test.ts",
+            "tsConfig": "projects/rt-style/tsconfig.spec.json",
+            "karmaConfig": "projects/rt-style/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rt-style/tsconfig.lib.json",
+              "projects/rt-style/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "RtTabs": {
+      "projectType": "library",
+      "root": "projects/rt-tabs",
+      "sourceRoot": "projects/rt-tabs/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/rt-tabs/tsconfig.lib.json",
+            "project": "projects/rt-tabs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rt-tabs/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rt-tabs/src/test.ts",
+            "tsConfig": "projects/rt-tabs/tsconfig.spec.json",
+            "karmaConfig": "projects/rt-tabs/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rt-tabs/tsconfig.lib.json",
+              "projects/rt-tabs/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "RlsLibrary"
+  "defaultProject": "RlsLibrary",
+  "cli": {
+    "analytics": "0a307958-12c2-4383-b122-b8fe9fbfad69"
+  }
 }
