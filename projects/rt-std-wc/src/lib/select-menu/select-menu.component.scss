@@ -1,0 +1,58 @@
+@import '../styles/checkbox.scss';
+@import '../styles/radio-button.scss';
+@import '../styles/slide-toggle.scss';
+.select-menu {
+    width: 240px !important;
+    border-radius: 6px !important;
+    background-color: var(--feedback-default-background) !important;
+    box-shadow: 0 1px 18px 0 var(--feedback-shadow) !important;
+    padding: 8px !important;
+}
+.select-row {
+    width: 224px !important;
+    margin-top: 1px !important;
+    height: 40px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    .mat-checkbox-inner-container {
+        width: 18px !important;
+        height: 18px !important;
+    }
+    .mat-radio-button {
+        width: 18px !important;
+    }
+
+}
+.radio-group {
+    width: 224px !important;
+}
+.selected-row {
+    border-radius: 6px !important;
+    background-color: var(--select-menu-selected-item-bg) !important;
+}
+.group {
+    margin-top: 4px !important;
+    width: 224px !important;
+}
+.group-header {
+    height: 28px !important;
+    padding-left: 6px !important;
+    color: var(--select-menu-label) !important;
+    @include rt-font(12px, bold, 14px);
+}
+.button-row {
+    width: 224px  !important;
+    padding-top: 16px  !important;
+    padding-bottom: 8px  !important;
+    .rt-btn-primary{
+        width: 208px  !important;
+    }
+}
+.group-line {
+    width: 240px  !important;
+    height: 1px  !important;
+    margin-left: -8px  !important;
+    margin-top: 8px  !important;
+    margin-bottom: 8px  !important;
+    background-color: var(--color-disable-button-bg) !important;
+}

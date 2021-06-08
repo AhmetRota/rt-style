@@ -1,0 +1,261 @@
+@import './styles.scss';
+
+mat-select,
+input,
+textarea {
+  @include rt-font(16px, normal, 19px);
+  border-radius: 6px !important;
+  background-color: var(--color-inputs-bg) !important;
+  border: none !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  color: var(--color-inputs) !important;
+
+  &:active, &:hover, &:focus {
+    outline: none !important;
+    border: 1px solid var(--color-border) !important;
+    background-color: transparent !important;
+  }
+}
+
+mat-select,
+input {
+  height: 40px !important;
+}
+
+input {
+  padding-left: 14px !important;
+}
+
+textarea {
+  padding: 17px 0 0 14px !important;
+}
+
+.mat-select-trigger {
+  margin: 12px 14px 0 14px !important;
+}
+
+.mat-select-value {
+  color: var(--color-inputs) !important;
+}
+
+.mat-select-arrow {
+  color: var(--color-dropdown-icon-bg) !important;
+}
+
+.mat-option-text {
+  color: var(--color-inputs) !important;
+}
+.mat-select-panel {
+    max-height: 240px !important;
+    top: 4px !important;
+    background-color: var(--color-e-sky-extra) !important;
+    .mat-option {
+        height: 40px !important;
+        font-family: Roboto !important;
+        letter-spacing: 0 !important;
+        font-size: 14px !important;
+        font-weight: normal !important;
+        line-height: 16px !important;
+        border-radius: 6px !important;
+        color: var(--color-text) !important;
+        padding-left: 7px !important;
+    }
+    .mat-option:hover {
+        background: none !important;
+        background-color: var(--select-menu-selected-item-bg) !important;
+    }
+    .mat-option.mat-active {
+        background-color: var(--select-menu-selected-item-bg) !important;
+    }
+    padding: 4px 8px 4px 8px !important;
+}
+
+.rt-mat-multi-select {
+    width: 240px !important;
+}
+.rt-mat-multi-select-row {
+    margin: 0px 8px 0px 8px !important;
+    border-radius: 6px !important;
+    padding: 0px 6px 0px 6px !important;
+    @include rt-font(14px, normal, 16px);
+    color:  var(--color-text) !important;
+  
+    .mat-option-text {
+      display: none !important;
+    }
+}
+.rt-mat-multi-select-row:hover {
+  background-color: var(--select-menu-selected-item-bg) !important;
+}
+.mat-select-panel-wrap{
+    .custom-panel {
+      background-color: var(--color-e-sky-extra) !important;
+      width: 240px !important;
+      position: relative !important;
+      left: 26px !important;
+      top: 33px !important;
+      min-width: 240px !important;
+      transform: translateX(0px) translateY(0px) !important;
+      .hidden-row {
+        display: none !important;
+      }
+      .selected-option-row {
+        margin-top: 2px !important;
+        background: var(--select-menu-selected-item-bg) !important;
+      }
+      .mat-option.mat-active {
+        background: none !important;
+      }
+      .mat-option:hover {
+        background: none !important;
+      }
+      .mat-option:focus {
+        background: none !important;
+      }
+      .mat-option-ripple {
+        display: none !important;
+      }
+      .mat-pseudo-checkbox-checked {
+        background: var(--primary) !important;
+      }
+      .mat-option-pseudo-checkbox {
+        margin-right: 0px !important;
+        width: 18.75px !important;
+        height: 18.75px !important;
+      }
+      .mat-pseudo-checkbox {
+       color: var(--selector-bg) !important;
+      }
+    }
+    .custom-panel .mat-optgroup-label, .custom-panel .mat-option {
+      height: 40px !important;
+      width: 35px !important;
+    }
+    .search {
+      width: 240px !important;
+      height: 66px !important;
+      padding: 12px 12px 14px 12px !important;
+      .inner-addon {
+          position: relative !important;
+      }
+      .inner-addon .glyphicon {
+        width: 16px !important;
+        position: absolute !important;
+        pointer-events: none !important;
+        padding-right: 14px !important;
+        color: var(--popover-content) !important;
+      }
+      .left-addon .glyphicon  { left:  0px !important;}
+      .right-addon .glyphicon { right: 0px !important;}
+    }
+}
+
+
+
+.rt-form {
+
+  .form-row {
+    margin-bottom: 10px !important;
+    position: relative !important;
+
+    mat-icon {
+      position: absolute !important;
+      right: 5px !important;
+      top: 30px !important;
+      cursor: pointer !important;
+      pointer-events: none !important;
+    }
+
+    .cancel {
+      color: $Form_Icon_Cancel !important;
+    }
+
+    .error {
+      color: var(--form-error-label) !important;
+    }
+
+    .approved {
+      color: $_A_Success_500 !important;
+    }
+
+  }
+
+  label {
+    color: var(--color-text-light) !important;
+    @include rt-font(14px, 500, 16px);
+    margin-bottom: 3px !important;
+  }
+
+  mat-form-field {
+    height: 70px !important;
+    @include rt-font(16px, normal, 19px);
+  }
+
+  mat-select,
+  input {
+    height: 46px !important;
+  }
+
+  textarea,
+  input {
+    padding-left: 5px !important;
+  }
+
+  ::ng-deep .mat-form-field-infix {
+    padding: 0 !important;
+    border-top: 0 !important;
+  }
+
+  ::ng-deep .mat-select-trigger {
+    margin: 12px 14px 0 14px !important;
+  }
+
+  ::ng-deep .mat-form-field-underline {
+    display: none !important;
+  }
+
+  ::ng-deep .mat-form-field-label {
+    padding: 12px !important;
+  }
+
+  ::ng-deep .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,
+  .mat-form-field-appearance-legacy.mat-form-field-can-float .mat-input-server:focus .mat-form-field-label-wrapper .mat-form-field-label {
+    transform: translateY(-1.7em) scale(0.75) perspective(100px) translateZ(0.001px) !important;
+  }
+
+}
+
+::ng-deep .mat-form-field-infix {
+  padding: 0 !important;
+  border-top: 0 !important;
+}
+
+.error-text {
+  visibility: hidden !important;
+  height: 14px !important;
+  color: var(--form-error-label) !important;
+  ;
+  margin-top: 2px !important;
+  @include rt-font(12px, normal, 14px);
+}
+
+.form-field-not-valid {
+  label {
+    color: var(--form-error-label) !important;
+  }
+
+  input {
+    border: 1px solid var(--form-error-label) !important;
+    box-sizing: border-box !important;
+  }
+
+  .input-button-wrapper {
+    background-color: #fff !important;
+  }
+
+  .error-text {
+    visibility: visible !important;
+  }
+
+}

@@ -32,9 +32,13 @@
         "dist/rt-style/rt-style",
         "dist/rt-style"
       ],
-      "rt-tabs": [
-        "dist/rt-tabs/rt-tabs",
-        "dist/rt-tabs"
+      "rt-std-wc": [
+        "dist/rt-std-wc/rt-std-wc",
+        "dist/rt-std-wc"
+      ],
+      "rt-deneme": [
+        "dist/rt-deneme/rt-deneme",
+        "dist/rt-deneme"
       ]
     }
   },

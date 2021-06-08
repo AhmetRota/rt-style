@@ -1,0 +1,53 @@
+@import '../styles/styles.scss';
+
+mat-button-toggle-group {
+    width: 100%;
+}
+
+.task-toggle {
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: var(--color-e-sky-extra);
+    border-radius: 6px;
+    background-color: var(--color-e-sky-extra);
+    padding: 4px;
+
+    .toggle {
+        width: 100px;
+        height: 40px;
+        border-radius: 6px;
+        background-color: var(--color-e-sky-extra);
+        color: var(--color-text-light);
+        @include rt-font;
+        text-align: center;
+        border-left: none !important;
+    }
+
+    ::ng-deep .mat-button-toggle-label-content {
+        height: 40px !important;
+        line-height: 40px !important;
+    }
+
+    .mat-icon {
+        border-left: none !important;
+    }
+
+    .mat-button-toggle-checked {
+        background-color: var(--primary_06);
+        color: var(--primary);
+    }
+
+    .mat-button-toggle-button {
+        height: 40px !important;
+    }
+
+    .mat-button-toggle-appearance-standard {
+        line-height: 40px !important;
+    }
+
+    .icon-toggle {
+        width: 46px;
+    }
+    
+}

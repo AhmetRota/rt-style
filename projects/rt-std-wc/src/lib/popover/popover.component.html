@@ -1,0 +1,9 @@
+<div class="popover-wrapper" fxLayout="column">
+    <div class="popover-header" fxLayout="row">
+      <div fxFlex>{{header}}</div>
+      <mat-icon class="close-popover-icon clickable" fxLayoutAlign="end center" (click)="closePopover()">close</mat-icon>
+    </div>
+    <mat-divider class="divider"></mat-divider>   
+    <div class="popover-content">{{content}}</div>
+  </div>
+  

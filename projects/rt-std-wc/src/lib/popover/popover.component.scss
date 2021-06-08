@@ -1,0 +1,51 @@
+@import '../styles/styles.scss';
+
+.custom-dialog {
+  padding: 0 !important;
+  height: auto !important;
+  overflow: hidden !important;
+}
+
+::ng-deep .mat-dialog-container {
+  padding: 0 !important;
+  border-radius: 8px !important;
+  background-color: transparent !important;
+}
+
+.popover-wrapper {
+  width: 232px !important;
+  height: auto !important;
+  max-height: 240px !important;
+  box-sizing: border-box !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+  background-color: var(--color-e-sky-extra) !important;
+  box-shadow: 0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+}
+
+.popover-header {
+  padding-bottom: 8px !important;
+  box-sizing: border-box !important;
+  @include rt-font(14px, bold, 16px);
+  color: var(--popover-header) !important;
+}
+
+.close-popover-icon {
+  width: 20px !important;
+  height: 20px !important;
+  color: var(--color-text-light) !important;
+}
+
+.divider {
+  padding: 0 10px !important;
+  color: var(--color-custom-01-sky) !important;
+  background-color: var(--color-custom-01-sky) !important;
+}
+
+.popover-content {
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+  padding-top: 8px !important;
+  box-sizing: border-box !important;
+  color: var(--popover-content) !important;
+}

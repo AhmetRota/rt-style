@@ -1,0 +1,27 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/rt-std-wc",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "assets": [
+    "./src/lib/styles/index.scss",
+    "./src/lib/styles/accordion.scss",
+    "./src/lib/styles/button.scss",
+    "./src/lib/styles/scrollbar.scss",
+    "./src/lib/styles/styles.scss",
+    "./src/lib/styles/theme.scss",
+    "./src/lib/styles/checkbox.scss",
+    "./src/lib/styles/radio-button.scss",
+    "./src/lib/styles/slide-toggle.scss",
+    "./src/lib/styles/autocomplete.scss",
+    "./src/lib/styles/form.scss",
+    "./src/lib/styles/chip.scss",
+    "./src/lib/styles/multi-step.scss",
+    "./src/lib/popover/popover.component.scss",
+    "./src/lib/select-menu/select-menu.component.scss",
+    "./src/lib/tabs/tabs.component.scss",
+    "./src/lib/feedback/feedback.component.scss",
+    "./src/lib/loading-indicator/loading-indicator.component.scss"
+  ]
+}

@@ -1,0 +1,45 @@
+@import './styles.scss';
+
+.mat-step-header .mat-step-icon-state,
+.mat-step-header .mat-step-icon-state-edit,
+.mat-step-header .mat-step-icon-selected {
+  background-color: var(--color-stepper-icon) !important;
+}
+
+mat-vertical-stepper .mat-vertical-content {
+  padding: 0 0 24px 16px !important;
+}
+
+.mat-vertical-stepper-header {
+  padding: 13px 0 13px 12px !important;
+  border-radius: 8px !important;
+  margin: 10px 0 !important;
+}
+
+.mat-vertical-content-container {
+  margin-left: 24px !important;
+}
+
+.mat-stepper-horizontal,
+.mat-stepper-vertical {
+  background-color: var(--color-stepper-bg) !important;
+}
+
+.mat-step-header .mat-step-label {
+  color: var(--color-stepper-header) !important;
+  @include rt-font(14px, bold, 16px);
+}
+
+.mat-step-header:hover {
+  background-color: var(--color-hover) !important;
+}
+
+.mat-stepper-vertical-line::before {
+  border-left-width: 2px !important;
+  border-color: var(--color-stepper-line) !important;
+  border-radius: 1px !important;
+}
+
+.mat-step-header[aria-selected="false"] .mat-step-text-label {
+  color: var(--multi-select-inactive) !important;
+}

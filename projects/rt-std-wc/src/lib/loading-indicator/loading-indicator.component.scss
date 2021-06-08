@@ -1,0 +1,45 @@
+@import '../styles/styles.scss';
+.loading-wrapper {
+  position: absolute  !important;
+  top: 0  !important;
+  right: 0  !important;
+  width: 100%  !important;
+  height: 100%  !important;
+  background-color: var(--color-loading-indicator-bg)  !important;
+  z-index: 11  !important;
+}
+
+.loading-wrapper ::ng-deep .mat-progress-spinner circle,
+.mat-spinner circle {
+  stroke: #FFF  !important;
+}
+
+mat-icon {
+  position: absolute  !important;
+  width: 24px  !important;
+  height: 24px  !important;
+  left: calc(50% - 12px)  !important;
+  top: calc(50% - 12px)  !important;
+  color: #FFF  !important;
+}
+
+mat-spinner {
+  width: 48px !important;
+  height: 48px !important;
+  left: calc(50% - 24px) !important;
+  top: calc(50% - 24px) !important;
+
+  ::ng-deep svg {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
+::ng-deep  .mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate] circle {
+    transition-property: stroke !important;
+    animation-duration: 4000ms !important;
+    animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1) !important;
+    animation-iteration-count: infinite !important;
+}
+::ng-deep .mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate] svg {
+    animation: mat-progress-spinner-linear-rotate 2000ms linear infinite !important;
+}

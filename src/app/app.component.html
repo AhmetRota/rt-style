@@ -54,4 +54,213 @@
 
   <rt-tabs [buttonList]="exampleInput" [defaultSelection]="selectedVal" (changeToggle)="changeToggle($event)"></rt-tabs>
 
+
+
+      <!-- Start Slide Toggle -->
+      <div style="width: 800px;" fxLayoutGap="15px">
+        <h3>Slide Toggle</h3>
+        <mat-slide-toggle>Slide me!</mat-slide-toggle>
+        <mat-slide-toggle [checked]="true">Slide me!</mat-slide-toggle>
+        <mat-slide-toggle [disabled]="true">Slide me!</mat-slide-toggle>
+        <mat-slide-toggle [disabled]="true" [checked]="true">Slide me!</mat-slide-toggle>
+      </div>
+      <!-- End Slide Toggle -->
+  
+      <!-- Start Checkboxes -->
+      <div style="width: 800px;" fxLayoutGap="15px">
+        <h3>Checkboxes</h3>
+        <mat-checkbox>Inactive</mat-checkbox>
+        <mat-checkbox [checked]="true">Selected</mat-checkbox>
+        <mat-checkbox [indeterminate]="true">Indeterminated</mat-checkbox>
+        <mat-checkbox [checked]="true" [disabled]="true">Selected Disabled</mat-checkbox>
+        <mat-checkbox [indeterminate]="true" [disabled]="true"> Indeterminated Disabled</mat-checkbox>
+        <mat-checkbox [disabled]="true">Inactive Disabled</mat-checkbox>
+  
+      </div>
+      <!-- End Checkboxes -->
+  
+      <!-- Start Radio buttons -->
+      <div style="width: 800px;" fxLayoutGap="15px">
+        <h3>Radio buttons</h3>
+        <mat-radio-group fxLayoutGap="15px">
+          <mat-radio-button [value]="0">Inactive</mat-radio-button>
+          <mat-radio-button [value]="1" [checked]="true">Selected</mat-radio-button>
+        </mat-radio-group>
+    
+        <mat-radio-group fxLayoutGap="15px">
+          <mat-radio-button [value]="0" [disabled]="true">Inactive Disabled</mat-radio-button>
+          <mat-radio-button [value]="1"  [disabled]="true" [checked]="true">Selected Disabled</mat-radio-button>
+        </mat-radio-group>
+    
+      </div>
+      <!-- End Radio buttons -->
+
+  <div fxFlex="100" fxLayout="row wrap" fxLayoutGap="30px">
+    <rt-select-menu [menuId]="1" [itemList]="exampleMultiSelectItems" [isRightMenu]="true" [isCheckboxMenu]="true" [isGroup]="false" (multiSelectMenuChangeEvent)="multiSelectMenuChangeEvent($event)"></rt-select-menu>
+    <rt-select-menu [menuId]="2" [itemList]="exampleMultiSelectItems" [isRightMenu]="false" [isCheckboxMenu]="true" [isGroup]="false" (multiSelectMenuChangeEvent)="multiSelectMenuChangeEvent($event)"></rt-select-menu>
+    <rt-select-menu [menuId]="3" [itemList]="exampleMultiSelectItems" [isRightMenu]="true" [isCheckboxMenu]="false" [isGroup]="false" (multiSelectMenuChangeEvent)="multiSelectMenuChangeEvent($event)"></rt-select-menu>
+    <rt-select-menu [menuId]="4" [itemList]="exampleMultiSelectItems" [isRightMenu]="false" [isCheckboxMenu]="false" [isGroup]="false" (multiSelectMenuChangeEvent)="multiSelectMenuChangeEvent($event)"></rt-select-menu>
+    <rt-select-menu [menuId]="5" [itemList]="exampleMultiSelectItemsWithGroup"  [isGroup]="true" [isShowButton]="true" (multiSelectMenuChangeEvent)="multiSelectMenuChangeEvent($event)"></rt-select-menu>
+    <rt-select-menu [menuId]="6" [itemList]="exampleMultiSelectItemsWithGroup"  [isGroup]="true" (multiSelectMenuChangeEvent)="multiSelectMenuChangeEvent($event)"></rt-select-menu>
+  </div>
+
+  <form class="rt-autocomplete">
+    <mat-label>Autocomplete</mat-label>
+    <input type="text"
+           aria-label="Number"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </form>
+
+  <!-- Start Dropdown -->
+
+  <div fxFlex="100" fxLayout="row wrap" fxLayoutGap="50px">
+    <mat-select class="rt-mat-multi-select" [(value)]="selectedDropdownItems" multiple disableOptionCentering
+      panelClass="custom-panel">
+      <div class="rt-mat-multi-select-row" *ngFor="let item of dropdownItems" fxLayout="row"
+        fxLayoutAlign="space-between center" [ngClass]="getClassNameMatOption(item.id)">
+        {{ item.name }}
+        <mat-option [value]="item.id">{{ item.name }}</mat-option>
+      </div>
+    </mat-select>
+  </div>
+
+  <div fxFlex="100" fxLayout="row wrap" fxLayoutGap="50px">
+    <mat-select class="rt-mat-multi-select" [(value)]="searchSelectedDropdownItems" multiple disableOptionCentering
+      panelClass="custom-panel">
+      <div class="search" fxLayout="column" fxFlex="100">
+        <div class="inner-addon right-addon" fxLayoutAlign="space-between center">
+          <mat-icon matSuffix class="glyphicon">search</mat-icon>
+          <input type="text" class="form-control" placeholder="Search..." (input)="onSearchInputChange($event)">
+        </div>
+      </div>
+      <div class="rt-mat-multi-select-row" *ngFor="let item of searchDropdownItems" fxLayout="row"
+        fxLayoutAlign="space-between center" [ngClass]="getClassNameSearchMatOption(item.id)">
+        {{ item.name }}
+        <mat-option [value]="item.id">{{ item.name }}</mat-option>
+      </div>
+    </mat-select>
+  </div>
+  <!-- End Dropdown -->
+
+  <!-- Start Input -->
+  <div style="width: 600px;" fxLayout="row" fxLayoutGap="20px">
+      <input>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <mat-select disableOptionCentering>
+        <mat-option *ngFor="let currency of [1, 2, 3]" [value]="currency">
+          {{ currency }}
+        </mat-option>
+      </mat-select>
+  </div>
+  <!-- End Input -->
+
+    <!-- Start Label -->
+    <mat-chip-list aria-label="Selection">
+      <mat-chip class="rt-label-default rt-label-l">Status 1<mat-icon>clear</mat-icon>
+      </mat-chip>
+      <mat-chip class="rt-label-primary rt-label-l">Status 2<mat-icon>clear</mat-icon>
+      </mat-chip>
+      <mat-chip class="rt-label-green rt-label-l">Status 3</mat-chip>
+      <mat-chip class="rt-label-yellow rt-label-l">Status 4</mat-chip>
+      <mat-chip class="rt-label-red rt-label-l">Status 5</mat-chip>
+      <mat-chip class="rt-label-light-blue rt-label-l">Status 6</mat-chip>
+    </mat-chip-list>
+  
+    <mat-chip-list aria-label="Selection">
+      <mat-chip class="rt-label-stroked-default rt-label-l">Status 1<mat-icon>clear</mat-icon>
+      </mat-chip>
+      <mat-chip class="rt-label-stroked-primary rt-label-l">Status 2<mat-icon>clear</mat-icon>
+      </mat-chip>
+      <mat-chip class="rt-label-stroked-green rt-label-l">Status 3</mat-chip>
+      <mat-chip class="rt-label-stroked-yellow rt-label-l">Status 4</mat-chip>
+      <mat-chip class="rt-label-stroked-red rt-label-l">Status 5</mat-chip>
+      <mat-chip class="rt-label-stroked-light-blue rt-label-l">Status 6</mat-chip>
+    </mat-chip-list>
+  
+    <mat-chip-list aria-label="Selection">
+      <mat-chip class="rt-label-default rt-label-s">Status 1<mat-icon>clear</mat-icon>
+      </mat-chip>
+      <mat-chip class="rt-label-primary rt-label-s">Status 2<mat-icon>clear</mat-icon>
+      </mat-chip>
+      <mat-chip class="rt-label-green rt-label-s">Status 3</mat-chip>
+      <mat-chip class="rt-label-yellow rt-label-s">Status 4</mat-chip>
+      <mat-chip class="rt-label-red rt-label-s">Status 5</mat-chip>
+      <mat-chip class="rt-label-light-blue rt-label-s">Status 6</mat-chip>
+    </mat-chip-list>
+  
+    <mat-chip-list aria-label="Selection">
+      <mat-chip class="rt-label-stroked-default rt-label-s">Status 1<mat-icon>clear</mat-icon>
+      </mat-chip>
+      <mat-chip class="rt-label-stroked-primary rt-label-s">Status 2<mat-icon>clear</mat-icon>
+      </mat-chip>
+      <mat-chip class="rt-label-stroked-green rt-label-s">Status 3</mat-chip>
+      <mat-chip class="rt-label-stroked-yellow rt-label-s">Status 4</mat-chip>
+      <mat-chip class="rt-label-stroked-red rt-label-s">Status 5</mat-chip>
+      <mat-chip class="rt-label-stroked-light-blue rt-label-s">Status 6</mat-chip>
+    </mat-chip-list>
+  
+    <!-- End Label -->
+
+    <!-- Start Popover -->
+    <button #element (click)="openPopover(element, popoverPosition.rightCenter)" class="rt-btn-primary rt-btn-lg">Popover
+      rightCenter</button>
+    <!-- End Popover -->
+
+    <!-- Start Multi-step -->
+    <mat-vertical-stepper class="stepper-wrapper" #stepper [linear]="true">
+      <mat-step label="Form Bilgileri">
+      </mat-step>
+      <mat-step label="Malzeme Listesi" id="grid" fxLayoutGap="25px">
+      </mat-step>
+    </mat-vertical-stepper>
+    <!-- End Multi-step -->
+
+    <!-- Start Form -->
+    <div style="width: 500px;">
+      <form [formGroup]="userForm" class="rt-form">
+        <div class="form-row" fxLayout="column" [ngClass]="getErrorClass(userForm, 'name')">
+          <label>Name</label>
+          <input type="text" class="form-control" formControlName="name" (focus)="focus(userForm, 'name')" (blur)="blur(userForm, 'name')">
+          <mat-icon id="name" #nameIcon [ngClass]="getClassNameForColor(nameIcon)">{{getIconName(userForm, 'name')}}</mat-icon>
+          <div class="error-text">Minimum 4 Karekter olmalı</div>
+        </div>
+      
+        <div class="form-row" fxLayout="column" [ngClass]="getErrorClass(userForm, 'email')">
+          <label>Email</label>
+          <input type="text" class="form-control" formControlName="email" (focus)="focus(userForm, 'email')" (blur)="blur(userForm, 'email')">
+          <mat-icon id="email" #emailIcon [ngClass]="getClassNameForColor(emailIcon)">{{getIconName(userForm, 'email')}}</mat-icon>
+          <div class="error-text">Zorunlu Alan</div>
+        </div>
+      
+        <div class="form-row" fxLayout="column" [ngClass]="getErrorClass(userForm, 'phone')">
+          <label>Phone</label>
+          <input type="text" class="form-control" formControlName="phone" (focus)="focus(userForm, 'phone')" (blur)="blur(userForm, 'phone')">
+          <mat-icon id="phone" #phoneIcon [ngClass]="getClassNameForColor(phoneIcon)">{{getIconName(userForm, 'phone')}}</mat-icon>
+          <div class="error-text">Zorunlu Alan</div>
+        </div>
+      
+        <div class="form-row" fxLayout="column" [ngClass]="getErrorClass(userForm, 'message')">
+          <label>Message</label>
+          <textarea type="text" class="form-control" formControlName="message" (focus)="focus(userForm, 'message')" (blur)="blur(userForm, 'message')"></textarea>
+          <mat-icon id="message" #messageIcon [ngClass]="getClassNameForColor(messageIcon)">{{getIconName(userForm, 'message')}}</mat-icon>
+          <div class="error-text">Zorunlu Alan</div>
+        </div>
+      </form>
+    </div>
+    <!-- End Form -->
+
+     <!-- Start Loading Indicator -->
+    <div style="width: 300px; height: 300px; position: relative;">
+      <rt-loading-indicator [showLoadingIndicator]="true"></rt-loading-indicator>
+    </div>
+    <!-- End Loading Indicator -->
+
 </div>
+<rt-feedback></rt-feedback>

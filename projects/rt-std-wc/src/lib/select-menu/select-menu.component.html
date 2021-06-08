@@ -1,0 +1,53 @@
+<div *ngIf="!isGroup">
+    <div *ngIf="isCheckboxMenu"> 
+        <div *ngIf="isRightMenu" class="select-menu" fxLayout="row wrap">
+            <div class="select-row" *ngFor="let data of singleItemList" fxLayout="row" fxLayoutAlign="space-between center" [ngClass]="getClassNameCheckbox(data.value)">
+                {{data.name}}
+                <mat-checkbox [id]="menuId + '|' + data.value.toString()" (change)="onCheckboxChange($event)"></mat-checkbox>
+            </div>
+        </div>
+        <div *ngIf="!isRightMenu" class="select-menu" fxLayout="row wrap">
+            <div class="select-row" *ngFor="let data of singleItemList" fxLayout="row" fxLayoutAlign="start center"[ngClass]="getClassNameCheckbox(data.value)">
+                <mat-checkbox [id]="menuId + '|' + data.value.toString()" (change)="onCheckboxChange($event)">{{data.name}}</mat-checkbox>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!isCheckboxMenu">
+        <div *ngIf="isRightMenu" class="select-menu" fxLayout="row wrap">
+            <mat-radio-group class="radio-group"  fxLayout="row wrap">
+                <div class="select-row" *ngFor="let data of singleItemList"  fxLayoutAlign="space-between center" [ngClass]="getClassNameRadio(data.value)">
+                    {{data.name}}
+                    <mat-radio-button fxLayout="row" [checked]="false" [value]="data.value" (change)="onRadioChange($event)"></mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </div>
+        <div *ngIf="!isRightMenu" class="select-menu" fxLayout="row wrap">
+            <mat-radio-group class="radio-group" fxLayout="row wrap">
+                <div class="select-row" *ngFor="let data of singleItemList"  fxLayoutAlign="start center" [ngClass]="getClassNameRadio(data.value)">
+                    <mat-radio-button fxLayout="row" [checked]="false" [value]="data.value" (change)="onRadioChange($event)">{{data.name}}</mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </div>
+    </div>
+</div>
+<div *ngIf="isGroup">
+    <div *ngIf="isShowButton" class="select-menu" fxLayout="row wrap"> 
+        <div class="group" *ngFor="let group of groupItemList" fxLayout="row wrap" fxLayoutAlign="start center">
+            <div class="group-header" fxLayoutAlign="start center">{{group.labelName}}</div>
+            <div class="select-row" *ngFor="let data of group.labelData" fxLayout="row" fxLayoutAlign="start center" [ngClass]="getClassNameCheckbox(data.value)">
+                <mat-checkbox [id]="menuId + '|' + data.value.toString()" (change)="onCheckboxChange($event)">{{data.name}}</mat-checkbox>
+            </div>
+        </div>
+        <div class="button-row" fxLayoutAlign="center center">
+            <button class="rt-btn-primary"  (click)="emitStatus()">Button</button>
+        </div>
+    </div>
+    <div *ngIf="!isShowButton" class="select-menu" fxLayout="row wrap"> 
+        <div class="group" *ngFor="let group of groupItemList; let i = index" fxLayout="row wrap" fxLayoutAlign="start center">
+            <div *ngIf="i !== 0" class="group-line"></div>
+            <div class="select-row" *ngFor="let data of group.labelData" fxLayout="row" fxLayoutAlign="start center" [ngClass]="getClassNameCheckbox(data.value)">
+                <mat-checkbox [id]="menuId + '|' + data.value.toString()" (change)="onCheckboxChange($event)">{{data.name}}</mat-checkbox>
+            </div>
+        </div>
+    </div>
+</div>

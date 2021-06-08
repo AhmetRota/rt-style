@@ -1,0 +1,38 @@
+@import './styles.scss';
+@import './form.scss';
+.rt-autocomplete {
+    width: 240px !important;
+    color: var(--color-text) !important;
+    @include rt-font(14px, 500, 16px);
+    input {
+        margin-top: 4px !important;
+    }
+}
+.mat-autocomplete-panel {
+    max-height: 240px !important;
+    top: 4px !important;
+    background-color: var(--color-e-sky-extra) !important;
+    .mat-option {
+        height: 40px !important;
+        @include rt-font(14px, normal, 16px);
+        border-radius: 6px !important;
+        color: var(--color-text) !important;
+        padding-left: 7px !important;
+    }
+    .mat-option.mat-active {
+        background-color: var(--select-menu-selected-item-bg) !important;
+    }
+    .mat-option:hover {
+        background-color: var(--select-menu-selected-item-bg) !important;
+    }
+    
+}
+.mat-autocomplete-panel.mat-autocomplete-visible {
+    padding: 4px 8px 4px 8px !important;
+}
+.mat-autocomplete-panel .mat-option.mat-selected:not(.mat-active):not(:hover) {
+    background: none !important;
+}
+.mat-option.mat-selected:not(.mat-option-multiple):not(.mat-option-disabled) {
+    background: none !important;
+}

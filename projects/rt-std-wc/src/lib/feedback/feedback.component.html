@@ -1,0 +1,19 @@
+<div *ngIf="show" [ngClass]="[feedbackType, sizeType]" fxLayout="row">
+  <div class="icon-wrapper" fxLayout="row">
+    <div class="icon-area" fxLayoutAlign="center center">
+      <mat-icon>{{iconName}}</mat-icon>
+    </div>
+  </div>
+  <div class="content" fxLayout="column">
+    <div *ngIf="hasTitle(title)" class="snackbar-title overflow-ellipsis" fxLayout="column">
+      <p>{{title}}</p>
+    </div>
+    <div class="snackbar-text" fxLayout="column wrap">
+      <p class="overflow-wrap">{{message}}</p>
+    </div>
+  </div>
+  <div class="close-icon" fxLayout="row" (click)="close()">
+    <mat-icon>clear</mat-icon>
+  </div>
+</div>
+  

@@ -1,0 +1,111 @@
+@import './styles.scss';
+.rt-label {
+  min-height: 22px !important;
+  min-width: 70px !important;
+  border-radius: 4px !important;
+  padding: px 7px !important;
+  @include rt-font();
+  text-align: center !important;
+
+  .material-icons {
+    font-size: 16px !important;
+  }
+
+  mat-icon {
+    margin-left: 5px !important;
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+.rt-label-l {
+  height: 26px !important;
+}
+
+.rt-label-s {
+  height: 22px !important;
+}
+
+.rt-label-default {
+  @extend .rt-label;
+  background-color: var(--color-label-default) !important;
+  color: var(--color-text) !important;
+}
+
+.rt-label-primary {
+  @extend .rt-label;
+  background-color: var(--color-label-primary) !important;
+  color: #ffffff !important;
+}
+
+.rt-label-green {
+  @extend .rt-label;
+  background-color: #47D849 !important;
+  color: #ffffff !important;
+}
+
+.rt-label-yellow {
+  @extend .rt-label;
+  background-color: #F4BF00 !important;
+  color: #ffffff !important;
+}
+
+.rt-label-red {
+  @extend .rt-label;
+  background-color: #D82A03 !important;
+  color: #ffffff !important;
+}
+
+.rt-label-light-blue {
+  @extend .rt-label;
+  background-color: #02ADF7 !important;
+  color: #ffffff !important;
+}
+
+.rt-label-stroked-default {
+  @extend .rt-label;
+  background-color: var(--color-page-background) !important;
+  color: var(--color-text) !important;
+  border: 1px solid !important;
+  border-color: var(--color-label-border) !important;
+}
+
+.rt-label-stroked-primary {
+  @extend .rt-label;
+  background-color: var(--color-page-background) !important;
+  color: var(--color-text) !important;
+  border: 1px solid !important;
+  border-color: var(--color-label-primary) !important;
+}
+
+.rt-label-stroked-green {
+  @extend .rt-label;
+  background-color: var(--color-page-background) !important;
+  color: var(--color-text) !important;
+  border: 1px solid !important;
+  border-color: #47D849 !important;
+}
+
+.rt-label-stroked-yellow {
+  @extend .rt-label;
+  background-color: var(--color-page-background) !important;
+  color: var(--color-text) !important;
+  border: 1px solid !important;
+  border-color: #EAA61A !important;
+}
+
+.rt-label-stroked-red {
+  @extend .rt-label;
+  background-color: var(--color-page-background) !important;
+  color: var(--color-text) !important;
+    border: 1px solid !important;
+    border-color: #D82A03 !important;
+  }
+  
+  .rt-label-stroked-light-blue {
+    @extend .rt-label;
+    background-color: var(--color-page-background) !important;
+    color: var(--color-text) !important;
+    border: 1px solid !important;
+    border-color: #02ADF7 !important;
+  }
